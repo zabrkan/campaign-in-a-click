@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Campaign-in-a-Click — $1 Trial</title>
+  <meta name="description" content="Turn one product description into a complete multi-platform marketing campaign in 90 seconds. Try it for $1." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-1:#0c0516;
+      --bg-2:#150a2a;
+      --ink:#f4f2ff;
+      --muted:#c7c3ff;
+      --accent:#9b5cff;        /* neon purple */
+      --accent-2:#22ffd1;      /* mint pop */
+      --card:#1b1035;
+      --good:#75ffa7;
+      --bad:#ff6b6b;
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --radius: 14px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 800px at 80% -10%, #2a1160 0%, transparent 60%), linear-gradient(180deg,var(--bg-2),var(--bg-1) 40%, #090313 100%); color:var(--ink); font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; line-height:1.5}
+    a{color:var(--accent);text-decoration:none}
+    .wrap{max-width:1120px;margin:0 auto;padding:28px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:36px;height:36px;border-radius:12px;background:conic-gradient(from 210deg, #b37cff, #7f59ff, #22ffd1, #b37cff); box-shadow:0 0 40px rgba(155,92,255,.35)}
+    .brand h1{font-size:18px;margin:0;font-weight:800;letter-spacing:.2px}
+    .nav a.cta{padding:10px 16px;border-radius:999px;background:linear-gradient(90deg,var(--accent),#7f59ff); color:#0c0516; font-weight:800; box-shadow:var(--shadow)}
+    .hero{padding:40px 0 16px; display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center}
+    @media (max-width:900px){ .hero{grid-template-columns:1fr} .nav a.hide-m{display:none} }
+    .kicker{color:var(--accent-2);text-transform:uppercase; font-weight:800; letter-spacing:.12em; font-size:12px}
+    .hero h2{font-size:44px;line-height:1.1;margin:10px 0 12px; text-wrap:balance}
+    .hero p.sub{color:var(--muted);font-size:18px;margin:0 0 22px}
+    .bullets{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 22px}
+    .chip{background:rgba(155,92,255,.1);border:1px solid rgba(155,92,255,.35); color:var(--muted); padding:8px 12px; border-radius:999px; font-size:13px}
+    .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 18px;border-radius:12px;font-weight:800}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#7f59ff); color:#0c0516; box-shadow:var(--shadow)}
+    .btn.ghost{border:1px solid rgba(199,195,255,.25); color:var(--muted); backdrop-filter:blur(4px)}
+    .hero .panel{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.1); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
+    .demo{aspect-ratio:16/10; border-radius:12px; background:radial-gradient(200px 120px at 70% 30%, rgba(155,92,255,.35), transparent), #0d081b; display:grid; place-items:center; color:var(--muted); border:1px dashed rgba(199,195,255,.3)}
+    .trust{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px}
+    .trust .tick{display:flex;align-items:center;gap:8px;color:#cfe9ff;font-size:13px}
+    .section{padding:44px 0}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media (max-width:900px){ .grid-3{grid-template-columns:1fr} }
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
+    .card h3{margin:0 0 6px}
+    .price{display:grid;grid-template-columns:1fr 1fr; gap:18px}
+    @media (max-width:900px){ .price{grid-template-columns:1fr} }
+    .plan .tag{display:inline-block;background:rgba(34,255,209,.12); color:var(--accent-2); padding:4px 10px; border-radius:999px; font-size:12px; font-weight:700}
+    .big{font-size:40px;font-weight:800;margin:8px 0}
+    .strike{color:#a99df5;text-decoration:line-through}
+    .faq details{background:#120a25;border:1px solid rgba(255,255,255,.08); border-radius:12px; padding:14px 16px}
+    .faq summary{cursor:pointer;font-weight:700}
+    footer{border-top:1px solid rgba(255,255,255,.08); padding:28px 0; color:#b9b2ff; font-size:13px}
+    .count{display:flex;gap:10px}
+    .bubble{background:#0e0a1a;border:1px solid rgba(199,195,255,.25); border-radius:10px; padding:10px 12px; text-align:center}
+    .bubble b{display:block;font-size:20px}
+    .note{font-size:12px;color:#a99df5}
+  </style>
+</head>
+<body>
+
+  <nav class="wrap nav">
+    <div class="brand">
+      <div class="logo"></div>
+      <h1>Campaign-in-a-Click</h1>
+    </div>
+    <div>
+      <a class="hide-m" href="#how">How it works</a>
+      <a class="hide-m" href="#pricing" style="margin-left:16px">Pricing</a>
+      <a class="cta" href="https://buy.stripe.com/test_cNi5kD6C7d5OeEC6nJ7wA00" target="_blank" rel="noopener">Start $1 Trial</a>
+    </div>
+  </nav>
+
+  <header class="wrap hero">
+    <div>
+      <div class="kicker">90-second campaigns • fully automated</div>
+      <h2>Launch a complete marketing campaign for <span style="background:linear-gradient(90deg,#fff,#9b5cff); -webkit-background-clip:text; background-clip:text; color:transparent;">$1</span></h2>
+      <p class="sub">Paste your product link, pick your audience and tone — get a short-form ad script, 3 emails, 5 social captions, thumbnail ideas, and a blog post. Done in under 90 seconds.</p>
+      <div class="bullets">
+        <div class="chip">No credit card traps — cancel anytime</div>
+        <div class="chip">Founders’ trial for first 100 users</div>
+        <div class="chip">AI-crafted, human-ready copy</div>
+      </div>
+      <div class="cta-row">
+        <a class="btn primary" href="https://buy.stripe.com/test_cNi5kD6C7d5OeEC6nJ7wA00" target="_blank" rel="noopener">Start my $1 trial →</a>
+        <a class="btn ghost" href="#how">See how it works</a>
+      </div>
+      <div class="trust">
+        <div class="tick">✅ Instant delivery</div>
+        <div class="tick">✅ Keep outputs forever</div>
+        <div class="tick">✅ Works for ecom, local, SaaS, coaches</div>
+      </div>
+      <div style="margin-top:18px" class="note">Trial auto-continues at $29/mo after 7 days unless canceled.</div>
+    </div>
+    <div class="panel">
+      <div class="demo">Demo area — drop a GIF/video of the “type → generate” flow here</div>
+      <div style="margin-top:14px" class="count" id="count">
+        <div class="bubble"><b id="d">07</b><span>days</span></div>
+        <div class="bubble"><b id="h">00</b><span>hrs</span></div>
+        <div class="bubble"><b id="m">00</b><span>min</span></div>
+        <div class="bubble"><b id="s">00</b><span>sec</span></div>
+      </div>
+      <div class="note" style="margin-top:8px">Founders’ window closes when the timer hits zero or we hit 100 trials.</div>
+    </div>
+  </header>
+
+  <section id="how" class="wrap section">
+    <div class="grid-3">
+      <div class="card">
+        <h3>1) Enter</h3>
+        <p>Paste your product link (or describe it), choose audience & tone (sales, engagement, authority).</p>
+      </div>
+      <div class="card">
+        <h3>2) Click</h3>
+        <p>Our prompt engine assembles a cohesive, multi-platform campaign in seconds — no blank pages, no guesswork.</p>
+      </div>
+      <div class="card">
+        <h3>3) Launch</h3>
+        <p>You get a Google Doc with a short-form ad script, 3 emails, 5 captions, thumbnail ideas, and a blog draft — ready to post.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section">
+    <div class="card" style="display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center">
+      <div>
+        <h3 style="margin-top:0">What you get in every campaign</h3>
+        <ul>
+          <li>🎬 15–45s short-form video ad script (hook → body → CTA)</li>
+          <li>✉️ 3 promotional emails (announce, nudge, urgency)</li>
+          <li>💬 5 social captions tailored to platform</li>
+          <li>🖼️ 5 thumbnail/title ideas that pop</li>
+          <li>📝 500-700 word blog/article draft for SEO</li>
+        </ul>
+      </div>
+      <div class="card" style="background:#0f0a1d">
+        <div class="kicker">Beta social proof</div>
+        <p style="margin:.4rem 0 0"><em>“Typed my candle product URL and had a full campaign in 90 seconds. Ran two emails the same day.”</em></p>
+        <p style="color:#a99df5;margin:.2rem 0 0">— Early Beta, ecom</p>
+        <p style="margin:1rem 0 0"><em>“The $1 trial was a no-brainer. I kept the subscription because it saves me hours weekly.”</em></p>
+        <p style="color:#a99df5;margin:.2rem 0 0">— Local service owner</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="wrap section">
+    <div class="price">
+      <div class="card plan">
+        <span class="tag">Founders’ Trial</span>
+        <div class="big">$1</div>
+        <p class="note">Then <strong>$29/mo</strong> after 7 days unless canceled.</p>
+        <ul>
+          <li>Full campaign generation</li>
+          <li>Instant delivery via Google Doc</li>
+          <li>Keep outputs forever</li>
+        </ul>
+        <p><a class="btn primary" href="https://buy.stripe.com/test_cNi5kD6C7d5OeEC6nJ7wA00" target="_blank" rel="noopener">Start $1 Trial</a></p>
+      </div>
+      <div class="card plan">
+        <span class="tag" style="background:rgba(155,92,255,.18);color:#e3d5ff">Standard (After Trial)</span>
+        <div class="big">$29<span style="font-size:18px">/mo</span></div>
+        <p class="note">Unlimited campaigns during active subscription.</p>
+        <ul>
+          <li>Unlimited campaign runs</li>
+          <li>Email support</li>
+          <li>Early access features</li>
+        </ul>
+        <p><a class="btn ghost" href="#" target="_blank" rel="noopener">Lock in Standard</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section faq">
+    <h3 style="margin:0 0 10px">FAQ</h3>
+    <div class="grid-3">
+      <details open class="">
+        <summary>Do I need editing or copy skills?</summary>
+        <p>Nope. You paste a link, pick audience & tone, and your campaign is generated — ad script, emails, captions, thumbnails, blog draft.</p>
+      </details>
+      <details>
+        <summary>What happens after $1?</summary>
+        <p>Your trial runs for 7 days. If you love it, do nothing and it continues at $29/mo. Cancel anytime in one click.</p>
+      </details>
+      <details>
+        <summary>Can I keep what I generate?</summary>
+        <p>Yes. Everything you generate is yours to use forever, even if you cancel.</p>
+      </details>
+      <details>
+        <summary>Who is this for?</summary>
+        <p>Ecom brands, local businesses, coaches, creators, SaaS — anyone who needs fast, cohesive campaigns.</p>
+      </details>
+      <details>
+        <summary>How fast is delivery?</summary>
+        <p>Typically under 2 minutes from form submission to your inbox.</p>
+      </details>
+      <details>
+        <summary>Refunds?</summary>
+        <p>$1 trials are non-refundable; cancel before day 7 to avoid renewal.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer class="wrap">
+    <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© <span id="yr"></span> Campaign-in-a-Click</div>
+      <div><a href="#pricing">Pricing</a> · <a href="#">Terms</a> · <a href="#">Privacy</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // countdown (7 days from first load)
+    (function(){
+      const target = Date.now() + 7*24*60*60*1000;
+      const $d=document.getElementById('d'),$h=document.getElementById('h'),$m=document.getElementById('m'),$s=document.getElementById('s');
+      function pad(n){return String(n).padStart(2,'0')}
+      function tick(){
+        const diff = Math.max(0, target - Date.now());
+        const d = Math.floor(diff/86400000);
+        const h = Math.floor(diff%86400000/3600000);
+        const m = Math.floor(diff%3600000/60000);
+        const s = Math.floor(diff%60000/1000);
+        $d.textContent=pad(d); $h.textContent=pad(h); $m.textContent=pad(m); $s.textContent=pad(s);
+        if(diff>0) requestAnimationFrame(tick);
+      }
+      tick();
+      document.getElementById('yr').textContent=new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
