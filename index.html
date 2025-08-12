@@ -29,6 +29,9 @@
     .brand{display:flex;align-items:center;gap:12px}
     .logo{width:36px;height:36px;border-radius:12px;background:conic-gradient(from 210deg, #b37cff, #7f59ff, #22ffd1, #b37cff); box-shadow:0 0 40px rgba(155,92,255,.35)}
     .brand h1{font-size:18px;margin:0;font-weight:800;letter-spacing:.2px}
+ 
+    
+    
     .nav a.cta{padding:10px 16px;border-radius:999px;background:linear-gradient(90deg,var(--accent),#7f59ff); color:#0c0516; font-weight:800; box-shadow:var(--shadow)}
     .hero{padding:40px 0 16px; display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center}
     @media (max-width:900px){ .hero{grid-template-columns:1fr} .nav a.hide-m{display:none} }
@@ -60,7 +63,8 @@
     footer{border-top:1px solid rgba(255,255,255,.08); padding:28px 0; color:#b9b2ff; font-size:13px}
     .count{display:flex;gap:10px}
     .bubble{background:#0e0a1a;border:1px solid rgba(199,195,255,.25); border-radius:10px; padding:10px 12px; text-align:center}
-    .bubble b{display:block;font-size:20px}
+    .
+    bubble b{display:block;font-size:20px}
     .note{font-size:12px;color:#a99df5}
   </style>
 </head>
@@ -75,6 +79,7 @@
       <a class="hide-m" href="#how">How it works</a>
       <a class="hide-m" href="#pricing" style="margin-left:16px">Pricing</a>
       <a class="cta" href="https://buy.stripe.com/test_cNi5kD6C7d5OeEC6nJ7wA00" target="_blank" rel="noopener">Start $1 Trial</a>
+
     </div>
   </nav>
 
@@ -155,6 +160,7 @@
       <div class="card plan">
         <span class="tag">Founders’ Trial</span>
         <div class="big">$1</div>
+ 
         <p class="note">Then <strong>$29/mo</strong> after 7 days unless canceled.</p>
         <ul>
           <li>Full campaign generation</li>
@@ -229,6 +235,7 @@
         $d.textContent=pad(d); $h.textContent=pad(h); $m.textContent=pad(m); $s.textContent=pad(s);
         if(diff>0) requestAnimationFrame(tick);
       }
+ 
       tick();
       document.getElementById('yr').textContent=new Date().getFullYear();
     })();
